@@ -41,7 +41,23 @@
 
     * [946]: Tổng số xx
 
-    * [947:963]: Phase
+    * [947:963]: Phase, lần lượt là
+        - 11: Yêu cầu tài nguyên khi trade với người
+        - 6: Chọn các mô đun giữa turn
+        - 10: Đưa ra tài nguyên khi trade với người
+        - 3: Trả tài nguyên do bị chia bài
+        - 12: Người chơi phụ phản hồi trade
+        - 15: Chọn tài nguyên muốn nhận từ ngân hàng
+        - 14: Chọn tài nguyên khi trade với ngân hàng
+        - 1: Chọn các điểm đầu mút của đường
+        - 4: Di chuyển Robber
+        - 13: Người chơi chính duyệt trade
+        - 5: Chọn người để cướp tài nguyên
+        - 2: Đổ xx hoặc dùng thẻ dev
+        - 0: Chọn điểm đặt nhà đầu game
+        - 8: Chọn các điểm mua nhà
+        - 7: Chọn tài nguyên khi dùng thẻ dev
+        - 9: Chọn các điểm mua thành phố
 
     * [963:1017]: Điểm đặt thứ nhất (trong phase xây đường)
 
