@@ -1769,33 +1769,33 @@ def getAgentSize():
     return 4
 
 
-def one_game(list_player, perData):
-    env = initEnv()
+# def one_game(list_player, perData):
+#     env = initEnv()
 
-    winner = -1
-    while env[230] < __MAX_TURN_IN_ONE_GAME__:
-        p_idx = int(env[254])
-        state = getAgentState(env)
-        validActions = getValidActions(state)
-        action, perData = list_player[p_idx](state, perData)
-        if validActions[action] != 1:
-            raise Exception("Action không hợp lệ")
+#     winner = -1
+#     while env[230] < __MAX_TURN_IN_ONE_GAME__:
+#         p_idx = int(env[254])
+#         state = getAgentState(env)
+#         validActions = getValidActions(state)
+#         action, perData = list_player[p_idx](state, perData)
+#         if validActions[action] != 1:
+#             raise Exception("Action không hợp lệ")
 
-        stepEnv(env, action)
-        winner = checkEnded(env)
-        if winner != -1:
-            break
+#         stepEnv(env, action)
+#         winner = checkEnded(env)
+#         if winner != -1:
+#             break
 
-    env[255] = 1
-    env[np.array([68, 110, 152, 194])] += env[np.array([67, 109, 151, 193])]
+#     env[255] = 1
+#     env[np.array([68, 110, 152, 194])] += env[np.array([67, 109, 151, 193])]
 
-    env[229] = 2
-    for i in range(4):
-        env[254] = i
-        state = getAgentState(env)
-        action, perData = list_player[i](state, perData)
+#     env[229] = 2
+#     for i in range(4):
+#         env[254] = i
+#         state = getAgentState(env)
+#         action, perData = list_player[i](state, perData)
 
-    return winner, perData
+#     return winner, perData
 
 
 def normal_main(list_player, times, perData):
