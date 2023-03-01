@@ -1788,9 +1788,6 @@ def one_game_normal(p0, list_other, per_player, per1, per2, per3, p1, p2, p3):
         else:
             action, per3 = p3(state, per3)
 
-        if validActions[action] != 1:
-            raise Exception("Action không hợp lệ")
-
         stepEnv(env, action)
         winner = checkEnded(env)
         if winner != -1:
@@ -1837,9 +1834,6 @@ def one_game_numba(p0, list_other, per_player, per1, per2, per3, p1, p2, p3):
             action, per2 = p2(state, per2)
         else:
             action, per3 = p3(state, per3)
-
-        if validActions[action] != 1:
-            raise Exception("Action không hợp lệ")
 
         stepEnv(env, action)
         winner = checkEnded(env)
